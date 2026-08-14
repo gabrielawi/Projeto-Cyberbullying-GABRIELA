@@ -1,0 +1,1941 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Site educativo sobre cyberbullying: conceito, causas, consequências, prevenção, legislação brasileira e canais de denúncia.">
+
+    <title>Cyberbullying | Informação, Prevenção e Proteção</title>
+
+
+    <style>
+
+        /* =========================================
+           CONFIGURAÇÕES GERAIS
+        ========================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --azul-escuro: #08111f;
+            --azul: #102a43;
+            --azul-claro: #1d70a2;
+            --ciano: #35c4d9;
+            --branco: #f5f8fa;
+            --cinza: #aebbc7;
+            --cinza-escuro: #182635;
+            --vermelho: #d9534f;
+            --verde: #3caf72;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--azul-escuro);
+            color: var(--branco);
+            line-height: 1.7;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 90px 8%;
+            scroll-margin-top: 70px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .titulo-secao {
+            font-size: 2.4rem;
+            margin-bottom: 20px;
+            color: var(--ciano);
+        }
+
+        .subtitulo {
+            color: var(--cinza);
+            max-width: 800px;
+            margin-bottom: 45px;
+        }
+
+
+        /* =========================================
+           MENU
+        ========================================= */
+
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            background: rgba(8, 17, 31, 0.94);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: auto;
+            padding: 18px 25px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--ciano);
+        }
+
+        .menu {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .menu a {
+            color: var(--cinza);
+            transition: 0.3s;
+            font-size: 0.95rem;
+        }
+
+        .menu a:hover {
+            color: var(--ciano);
+        }
+
+
+        /* =========================================
+           HERO / INÍCIO
+        ========================================= */
+
+        #inicio {
+            min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+
+            position: relative;
+
+            background:
+                linear-gradient(
+                    rgba(8, 17, 31, 0.78),
+                    rgba(8, 17, 31, 0.95)
+                ),
+
+                url("IMAGENS/hero-cyberbullying.jpg");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero {
+            max-width: 850px;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 7vw, 6rem);
+            line-height: 1;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: var(--ciano);
+        }
+
+        .hero p {
+            color: var(--cinza);
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin-bottom: 35px;
+        }
+
+        .botao {
+            display: inline-block;
+
+            padding: 13px 25px;
+
+            border-radius: 30px;
+
+            background: var(--ciano);
+            color: var(--azul-escuro);
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .botao:hover {
+            transform: translateY(-3px);
+            filter: brightness(1.1);
+        }
+
+
+        /* =========================================
+           ESPAÇOS PARA IMAGENS
+        ========================================= */
+
+        .imagem-container {
+            width: 100%;
+            min-height: 280px;
+
+            margin: 40px 0;
+
+            border: 2px dashed rgba(53, 196, 217, 0.5);
+
+            border-radius: 18px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 30px;
+
+            background: rgba(255, 255, 255, 0.03);
+
+            color: var(--cinza);
+        }
+
+        .imagem-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+        }
+
+
+        /* =========================================
+           CONCEITO
+        ========================================= */
+
+        #conceito {
+            background: #0d1b2a;
+        }
+
+        .conceito-grid {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 45px;
+
+            align-items: center;
+        }
+
+        .conceito-texto p {
+            margin-bottom: 20px;
+            color: #d8e1e8;
+        }
+
+        .destaque {
+            border-left: 4px solid var(--ciano);
+
+            padding: 20px 25px;
+
+            background: rgba(53, 196, 217, 0.07);
+
+            border-radius: 0 12px 12px 0;
+        }
+
+
+        /* =========================================
+           CARDS
+        ========================================= */
+
+        .cards {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--cinza-escuro);
+
+            border: 1px solid rgba(255, 255, 255, 0.08);
+
+            border-radius: 18px;
+
+            padding: 30px;
+
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+
+            border-color: var(--ciano);
+        }
+
+        .icone {
+            font-size: 2rem;
+
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+
+            color: var(--ciano);
+        }
+
+        .card p {
+            color: var(--cinza);
+        }
+
+
+        /* =========================================
+           CAUSAS
+        ========================================= */
+
+        #causas {
+            background: var(--azul-escuro);
+        }
+
+
+        /* =========================================
+           CONSEQUÊNCIAS
+        ========================================= */
+
+        #consequencias {
+            background: #0d1b2a;
+        }
+
+        .consequencia-box {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 25px;
+        }
+
+        .consequencia {
+            padding: 30px;
+
+            border-radius: 15px;
+
+            background: var(--cinza-escuro);
+        }
+
+        .consequencia h3 {
+            color: #ff8b87;
+
+            margin-bottom: 12px;
+        }
+
+
+        /* =========================================
+           PREVENÇÃO
+        ========================================= */
+
+        #prevencao {
+            background: var(--azul-escuro);
+        }
+
+        .passos {
+            counter-reset: passos;
+        }
+
+        .passo {
+            counter-increment: passos;
+
+            display: flex;
+
+            gap: 25px;
+
+            padding: 25px;
+
+            margin-bottom: 18px;
+
+            background: var(--cinza-escuro);
+
+            border-radius: 15px;
+        }
+
+        .numero::before {
+            content: counter(passos);
+
+            width: 45px;
+            height: 45px;
+
+            border-radius: 50%;
+
+            background: var(--ciano);
+
+            color: var(--azul-escuro);
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            font-weight: bold;
+        }
+
+        .passo h3 {
+            margin-bottom: 5px;
+        }
+
+        .passo p {
+            color: var(--cinza);
+        }
+
+
+        /* =========================================
+           LEIS
+        ========================================= */
+
+        #leis {
+            background: #0d1b2a;
+        }
+
+        .lei {
+            background: var(--cinza-escuro);
+
+            padding: 30px;
+
+            margin-bottom: 20px;
+
+            border-radius: 15px;
+
+            border-left: 4px solid var(--ciano);
+        }
+
+        .lei h3 {
+            color: var(--ciano);
+
+            margin-bottom: 10px;
+        }
+
+        .fonte {
+            display: inline-block;
+
+            margin-top: 12px;
+
+            color: var(--ciano);
+
+            font-size: 0.9rem;
+        }
+
+
+        /* =========================================
+           SAMEER HINDUJA
+        ========================================= */
+
+        #especialista {
+            background: var(--azul-escuro);
+        }
+
+        .citacao {
+            max-width: 850px;
+
+            margin: auto;
+
+            padding: 45px;
+
+            border-radius: 20px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(29, 112, 162, 0.25),
+                    rgba(53, 196, 217, 0.05)
+                );
+
+            border: 1px solid rgba(53, 196, 217, 0.25);
+
+            text-align: center;
+        }
+
+        .citacao blockquote {
+            font-size: 1.5rem;
+
+            font-style: italic;
+
+            margin-bottom: 25px;
+        }
+
+        .citacao cite {
+            color: var(--ciano);
+        }
+
+
+        /* =========================================
+           VÍDEOS
+        ========================================= */
+
+        #videos {
+            background: #0d1b2a;
+        }
+
+        .videos-grid {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 30px;
+        }
+
+        .video-box {
+            background: var(--cinza-escuro);
+
+            border-radius: 18px;
+
+            overflow: hidden;
+        }
+
+        .video-placeholder {
+            aspect-ratio: 16 / 9;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 30px;
+
+            border: 2px dashed rgba(53, 196, 217, 0.4);
+
+            color: var(--cinza);
+        }
+
+        .texto-video {
+            padding: 20px;
+        }
+
+
+        /* =========================================
+           DENÚNCIA
+        ========================================= */
+
+        #denuncia {
+            background: var(--azul-escuro);
+        }
+
+        .alerta {
+            padding: 25px;
+
+            background: rgba(217, 83, 79, 0.12);
+
+            border: 1px solid rgba(217, 83, 79, 0.4);
+
+            border-radius: 15px;
+
+            margin-bottom: 35px;
+        }
+
+        .canais {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 20px;
+        }
+
+        .canal {
+            padding: 25px;
+
+            border-radius: 15px;
+
+            background: var(--cinza-escuro);
+        }
+
+        .canal h3 {
+            color: var(--ciano);
+
+            margin-bottom: 10px;
+        }
+
+        .numero {
+            font-size: 1.7rem;
+
+            font-weight: bold;
+
+            color: white;
+        }
+
+
+        /* =========================================
+           RODAPÉ
+        ========================================= */
+
+        footer {
+            background: #050b13;
+
+            text-align: center;
+
+            padding: 40px 20px;
+
+            color: var(--cinza);
+        }
+
+        footer strong {
+            color: var(--ciano);
+        }
+
+
+        /* =========================================
+           RESPONSIVIDADE
+        ========================================= */
+
+        @media (max-width: 850px) {
+
+            .menu {
+                display: none;
+            }
+
+            .conceito-grid,
+            .cards,
+            .consequencia-box,
+            .videos-grid,
+            .canais {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 70px 6%;
+            }
+
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         MENU
+    ========================================= -->
+
+    <header>
+
+        <nav>
+
+            <div class="logo">
+                CYBER<span>•</span>
+            </div>
+
+            <ul class="menu">
+
+                <li>
+                    <a href="#inicio">
+                        Início
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#conceito">
+                        Conceito
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#causas">
+                        Causas
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#consequencias">
+                        Consequências
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#prevencao">
+                        Prevenção
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#leis">
+                        Leis
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#denuncia">
+                        Denuncie
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================================
+         INÍCIO
+    ========================================= -->
+
+    <section id="inicio">
+
+        <div class="container hero">
+
+            <p>
+                CONSCIENTIZAÇÃO • PREVENÇÃO • PROTEÇÃO
+            </p>
+
+            <h1>
+
+                O que acontece
+                <br>
+
+                <span>online</span>
+                também importa.
+
+            </h1>
+
+            <p>
+
+                O cyberbullying ultrapassa a tela.
+                Palavras, imagens, ameaças e humilhações
+                podem atingir uma pessoa em qualquer lugar
+                e a qualquer momento.
+
+            </p>
+
+            <a href="#conceito" class="botao">
+
+                Entenda o problema ↓
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         CONCEITO
+    ========================================= -->
+
+    <section id="conceito">
+
+        <div class="container">
+
+            <h2 class="titulo-secao">
+                O que é Cyberbullying?
+            </h2>
+
+            <p class="subtitulo">
+
+                Entender o problema é o primeiro passo
+                para combatê-lo.
+
+            </p>
+
+
+            <div class="conceito-grid">
+
+
+                <div class="conceito-texto">
+
+                    <p>
+
+                        Cyberbullying é uma forma de
+                        intimidação sistemática realizada
+                        por meio de tecnologias digitais,
+                        como redes sociais, aplicativos de
+                        mensagens, jogos on-line e outras
+                        plataformas.
+
+                    </p>
+
+                    <p>
+
+                        Ele pode envolver insultos,
+                        humilhações, ameaças, disseminação
+                        de rumores, exposição de informações
+                        pessoais, exclusão deliberada,
+                        montagem ou adulteração de imagens
+                        e outras formas de constrangimento.
+
+                    </p>
+
+
+                    <div class="destaque">
+
+                        <strong>
+                            A principal diferença está
+                            no ambiente:
+                        </strong>
+
+                        <br>
+                        <br>
+
+                        No bullying tradicional, a agressão
+                        ocorre em determinados espaços.
+
+                        No cyberbullying, o conteúdo pode
+                        alcançar muitas pessoas rapidamente
+                        e continuar circulando mesmo depois
+                        de publicado.
+
+                    </div>
+
+                </div>
+
+
+                <!-- =====================================
+                     IMAGEM DO CONCEITO
+                ====================================== -->
+
+                <div class="imagem-container">
+
+                    <img src="Trabalho Cyberbullying/cyberbullying.jpg.webp">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         CAUSAS
+    ========================================= -->
+
+    <section id="causas">
+
+        <div class="container">
+
+            <h2 class="titulo-secao">
+
+                Causas e fatores que favorecem
+                o cyberbullying
+
+            </h2>
+
+            <p class="subtitulo">
+
+                O cyberbullying não surge por uma única
+                causa. Diversos fatores podem facilitar
+                sua ocorrência.
+
+            </p>
+
+
+            <div class="cards">
+
+
+                <div class="card">
+
+                    <div class="icone">
+                        👤
+                    </div>
+
+                    <h3>
+                        Anonimato
+                    </h3>
+
+                    <p>
+
+                        A sensação de estar protegido por
+                        uma conta anônima ou falsa pode
+                        diminuir a percepção das consequências
+                        dos próprios atos.
+
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="icone">
+                        📱
+                    </div>
+
+                    <h3>
+                        Facilidade de compartilhamento
+                    </h3>
+
+                    <p>
+
+                        Uma mensagem, imagem ou vídeo pode
+                        ser compartilhado rapidamente com
+                        muitas pessoas, aumentando o alcance
+                        da agressão.
+
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="icone">
+                        👥
+                    </div>
+
+                    <h3>
+                        Pressão do grupo
+                    </h3>
+
+                    <p>
+
+                        Pessoas podem participar de ataques
+                        para acompanhar amigos, buscar
+                        aprovação ou não se sentirem
+                        excluídas do grupo.
+
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="icone">
+                        🧠
+                    </div>
+
+                    <h3>
+                        Falta de empatia
+                    </h3>
+
+                    <p>
+
+                        A distância proporcionada pela tela
+                        pode dificultar que o agressor perceba
+                        o impacto de suas ações.
+
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="icone">
+                        🔒
+                    </div>
+
+                    <h3>
+                        Baixa supervisão
+                    </h3>
+
+                    <p>
+
+                        A ausência de orientação sobre
+                        segurança digital pode dificultar
+                        a identificação e prevenção de
+                        comportamentos abusivos.
+
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="icone">
+                        ⚡
+                    </div>
+
+                    <h3>
+                        Busca por atenção
+                    </h3>
+
+                    <p>
+
+                        Algumas agressões podem ser motivadas
+                        pela tentativa de obter popularidade,
+                        curtidas, visualizações ou reconhecimento.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 IMAGEM DAS CAUSAS
+            ====================================== -->
+
+            <div class="imagem-container">
+
+                <img src="Trabalho Cyberbullying/disseminação.jpg" alt="">
+
+            </div>
+
+        </div
+
+    </section>
+
+
+
+    <!-- =========================================
+         CONSEQUÊNCIAS
+    ========================================= -->
+
+    <section id="consequencias">
+
+        <div class="container">
+
+            <h2 class="titulo-secao">
+                Consequências
+            </h2>
+
+            <p class="subtitulo">
+
+                O impacto do cyberbullying pode ultrapassar
+                o ambiente virtual e afetar diferentes
+                áreas da vida.
+
+            </p>
+
+
+            <div class="consequencia-box">
+
+
+                <div class="consequencia">
+
+                    <h3>
+                        🧠 Impactos emocionais
+                    </h3>
+
+                    <p>
+
+                        Pode contribuir para sentimentos de
+                        medo, vergonha, insegurança, tristeza,
+                        isolamento e dificuldade de confiar
+                        em outras pessoas.
+
+                    </p>
+
+                </div>
+
+
+                <div class="consequencia">
+
+                    <h3>
+                        🏫 Impactos escolares
+                    </h3>
+
+                    <p>
+
+                        A vítima pode apresentar dificuldade
+                        de concentração, queda no rendimento,
+                        afastamento de colegas ou resistência
+                        em frequentar a escola.
+
+                    </p>
+
+                </div>
+
+
+                <div class="consequencia">
+
+                    <h3>
+                        👥 Impactos sociais
+                    </h3>
+
+                    <p>
+
+                        A exposição pública pode prejudicar
+                        relações de amizade, convivência
+                        familiar e participação em grupos
+                        sociais.
+
+                    </p>
+
+                </div>
+
+
+                <div class="consequencia">
+
+                    <h3>
+                        🌐 Permanência digital
+                    </h3>
+
+                    <p>
+
+                        Conteúdos publicados podem ser copiados,
+                        compartilhados e reaparecer posteriormente,
+                        aumentando a sensação de exposição.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 VÍDEO DAS CONSEQUÊNCIAS
+            ====================================== -->
+
+            <div class="video-box" style="margin-top: 40px;">
+
+                <div class="video-placeholder">
+
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/cADbDHf2G_o?si=rDah75XLKVJUkI5J" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                </div
+
+            </div
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         PREVENÇÃO
+    ========================================= -->
+
+    <section id="prevencao">
+
+        <div class="container">
+
+            <h2 class="titulo-secao">
+
+                Como evitar e combater
+
+            </h2>
+
+            <p class="subtitulo">
+
+                Pequenas atitudes podem ajudar a interromper
+                ciclos de agressão e proteger outras pessoas.
+
+            </p>
+
+
+            <div class="passos">
+
+
+                <div class="passo">
+
+                    <div class="numero"></div>
+
+                    <div>
+
+                        <h3>
+                            Não compartilhe conteúdo ofensivo
+                        </h3>
+
+                        <p>
+
+                            Compartilhar uma publicação ofensiva,
+                            mesmo sem ter criado o conteúdo,
+                            pode aumentar seu alcance.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="passo">
+
+                    <div class="numero"></div>
+
+                    <div>
+
+                        <h3>
+                            Bloqueie e denuncie
+                        </h3>
+
+                        <p>
+
+                            Utilize os recursos de bloqueio
+                            e denúncia disponíveis nas
+                            próprias plataformas.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="passo">
+
+                    <div class="numero"></div>
+
+                    <div>
+
+                        <h3>
+                            Guarde evidências
+                        </h3>
+
+                        <p>
+
+                            Quando for seguro fazê-lo,
+                            preserve informações relevantes
+                            sobre o ocorrido, como links,
+                            datas e capturas de tela.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="passo">
+
+                    <div class="numero"></div>
+
+                    <div>
+
+                        <h3>
+                            Procure ajuda
+                        </h3>
+
+                        <p>
+
+                            Converse com um adulto de confiança,
+                            professor, responsável ou profissional
+                            capacitado.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="passo">
+
+                    <div class="numero"></div>
+
+                    <div>
+
+                        <h3>
+                            Não enfrente sozinho
+                        </h3>
+
+                        <p>
+
+                            Pedir ajuda não é fraqueza.
+                            A violência digital deve ser tratada
+                            como um problema que precisa de apoio
+                            e intervenção.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 IMAGEM DA PREVENÇÃO
+            ====================================== -->
+
+            <div class="imagem-container">
+
+            <img src="Trabalho Cyberbullying/saudável.jpg" alt="">    
+
+                
+
+            </div
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         LEIS
+    ========================================= -->
+
+    <section id="leis">
+
+        <div class="container">
+
+            <h2 class="titulo-secao">
+
+                O que dizem as leis brasileiras?
+
+            </h2>
+
+            <p class="subtitulo">
+
+                O cyberbullying não é apenas um problema
+                social: determinadas condutas podem gerar
+                consequências jurídicas.
+
+            </p>
+
+
+            <div class="lei">
+
+                <h3>
+                    Lei nº 13.185/2015
+                </h3>
+
+                <p>
+
+                    Institui o Programa de Combate à Intimidação
+                    Sistemática (Bullying). A lei reconhece
+                    também a intimidação sistemática realizada
+                    pela internet, caracterizando o cyberbullying.
+
+                </p>
+
+                <a
+                    class="fonte"
+                    href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13185.htm"
+                    target="_blank">
+
+                    Ver texto oficial →
+
+                </a>
+
+            </div>
+
+
+            <div class="lei">
+
+                <h3>
+                    Lei nº 14.811/2024
+                </h3>
+
+                <p>
+
+                    Incluiu no Código Penal o crime de intimidação
+                    sistemática (bullying) e estabeleceu previsão
+                    específica para a intimidação sistemática
+                    virtual, o cyberbullying.
+
+                </p>
+
+                <a
+                    class="fonte"
+                    href="https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14811.htm"
+                    target="_blank">
+
+                    Ver texto oficial →
+
+                </a>
+
+            </div>
+
+
+            <div class="lei">
+
+                <h3>
+                    Estatuto da Criança e do Adolescente — ECA
+                </h3>
+
+                <p>
+
+                    O ECA estabelece o direito de crianças e
+                    adolescentes à liberdade, ao respeito e à
+                    dignidade, protegendo sua integridade física,
+                    psíquica e moral.
+
+                </p>
+
+                <a
+                    class="fonte"
+                    href="https://www.planalto.gov.br/ccivil_03/leis/l8069.htm"
+                    target="_blank">
+
+                    Ver texto oficial →
+
+                </a>
+
+            </div>
+
+
+            <div class="lei">
+
+                <h3>
+                    Marco Civil da Internet — Lei nº 12.965/2014
+                </h3>
+
+                <p>
+
+                    Estabelece princípios, garantias, direitos
+                    e deveres para o uso da internet no Brasil,
+                    incluindo questões relacionadas à privacidade.
+
+                </p>
+
+                <a
+                    class="fonte"
+                    href="https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l12965.htm"
+                    target="_blank">
+
+                    Ver texto oficial →
+
+                </a>
+
+            </div>
+
+
+            <div class="lei">
+
+                <h3>
+                    LGPD — Lei nº 13.709/2018
+                </h3>
+
+                <p>
+
+                    A Lei Geral de Proteção de Dados estabelece
+                    regras para o tratamento de dados pessoais
+                    e determina proteção especial para dados
+                    de crianças e adolescentes.
+
+                </p>
+
+                <a
+                    class="fonte"
+                    href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm"
+                    target="_blank">
+
+                    Ver texto oficial →
+
+                </a>
+
+            </div>
+
+
+            <p style="margin-top: 30px; color: #aebbc7;">
+
+                <strong>Observação:</strong>
+
+                A aplicação de cada lei depende das circunstâncias
+                concretas do caso. Este site possui finalidade
+                educativa e não substitui orientação jurídica.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         SAMEER HINDUJA
+    ========================================= -->
+
+    <section id="especialista">
+
+        <div class="container">
+
+            <h2 class="titulo-secao">
+
+                Uma voz na luta contra o cyberbullying
+
+            </h2>
+
+            <p class="subtitulo">
+
+                Sameer Hinduja é pesquisador e cofundador
+                do Cyberbullying Research Center.
+
+            </p>
+
+
+            <div class="citacao">
+
+                <blockquote>
+
+                    "Todos têm um papel a desempenhar."
+
+                </blockquote>
+
+                <cite>
+
+                    — Sameer Hinduja
+
+                </cite>
+
+                <br>
+                <br>
+
+                <p style="color: #aebbc7;">
+
+                    Para Hinduja, a prevenção do cyberbullying
+                    exige a participação conjunta de escolas,
+                    famílias, profissionais, plataformas digitais
+                    e da sociedade.
+
+                </p>
+
+                <br>
+
+                <a
+                    class="fonte"
+                    href="https://cyberbullying.org/priority-cyberbullying-prevention"
+                    target="_blank">
+
+                    Fonte: Cyberbullying Research Center →
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         VÍDEOS
+    ========================================= -->
+
+    <section id="videos">
+
+        <div class="container">
+
+            <h2 class="titulo-secao">
+
+                Vídeos para entender
+
+            </h2>
+
+            <p class="subtitulo">
+
+            </p>
+
+
+            <div class="videos-grid">
+
+
+                <!-- VÍDEO 2 -->
+
+                <div class="video-box">
+
+                    <div class="video-placeholder">
+
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Zw2ODkqZrbM?si=wJTvRmZuxefAnd8_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                        
+
+                    </div>
+
+
+                    <div class="texto-video">
+
+                        <h3>
+                            Como evitar o Cyberbullying
+                        </h3>
+
+                        <p>
+
+                            Vídeo mostrando conselhos para evitar ataques e também como ajudar outras vítimas.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- VÍDEO 3 -->
+
+                <div class="video-box">
+
+                    <div class="video-placeholder">
+
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/zUKEGzf35j8?si=puJI0DRRIvn_UCab" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                    </div>
+
+
+                    <div class="texto-video">
+
+                        <h3>
+                            Segurança digital
+                        </h3>
+
+                        <p>
+
+                            Vídeo abordando privacidade,
+                            exposição de informações pessoais
+                            e comportamento responsável
+                            na internet.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         DENÚNCIA
+    ========================================= -->
+
+    <section id="denuncia">
+
+        <div class="container">
+
+            <h2 class="titulo-secao">
+
+                Viu ou sofreu uma violação? Denuncie.
+
+            </h2>
+
+            <p class="subtitulo">
+
+                Não é necessário enfrentar uma situação
+                de violência ou violação de direitos
+                humanos sozinho.
+
+            </p>
+
+
+            <div class="alerta">
+
+                <strong>
+                    🚨 DISQUE 100
+                </strong>
+
+                <br>
+                <br>
+
+                O Disque Direitos Humanos recebe denúncias
+                de violações de direitos humanos.
+
+                O serviço é gratuito, funciona 24 horas
+                por dia, todos os dias da semana, e pode
+                receber denúncias anônimas.
+
+            </div>
+
+
+            <div class="canais">
+
+
+                <!-- TELEFONE -->
+
+                <div class="canal">
+
+                    <h3>
+                        📞 Telefone
+                    </h3>
+
+                    <div class="numero">
+                        100
+                    </div>
+
+                    <p>
+
+                        Ligação gratuita de telefone fixo
+                        ou celular, em todo o Brasil.
+
+                    </p>
+
+                </div>
+
+
+                <!-- WHATSAPP -->
+
+                <div class="canal">
+
+                    <h3>
+                        💬 WhatsApp
+                    </h3>
+
+                    <div class="numero">
+
+                        (61) 99611-0100
+
+                    </div>
+
+                    <p>
+
+                        Canal oficial para atendimento
+                        e registro de denúncias.
+
+                    </p>
+
+                </div>
+
+
+                <!-- TELEGRAM -->
+
+                <div class="canal">
+
+                    <h3>
+                        ✈️ Telegram
+                    </h3>
+
+                    <p>
+
+                        No Telegram, procure por:
+
+                    </p>
+
+                    <div class="numero">
+
+                        DireitosHumanosBrasil
+
+                    </div>
+
+                </div>
+
+
+                <!-- INTERNET -->
+
+                <div class="canal">
+
+                    <h3>
+                        🌐 Internet
+                    </h3>
+
+                    <p>
+
+                        Também é possível utilizar os canais
+                        digitais da Ouvidoria Nacional de
+                        Direitos Humanos, incluindo atendimento
+                        por chat.
+
+                    </p>
+
+                    <a
+                        class="fonte"
+                        href="https://www.gov.br/mdh/pt-br/ondh"
+                        target="_blank">
+
+                        Acessar Ouvidoria →
+
+                    </a>
+
+                </div>
+
+
+                <!-- LIBRAS -->
+
+                <div class="canal">
+
+                    <h3>
+                        🤟 Libras
+                    </h3>
+
+                    <p>
+
+                        O Disque 100 também oferece atendimento
+                        acessível em Libras por videochamada.
+
+                    </p>
+
+                    <a
+                        class="fonte"
+                        href="https://atendelibras.mdh.gov.br/acesso"
+                        target="_blank">
+
+                        Atendimento em Libras →
+
+                    </a>
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="canal">
+
+                    <h3>
+                        📧 E-mail
+                    </h3>
+
+                    <p>
+
+                        A Ouvidoria também disponibiliza
+                        endereço eletrônico oficial para
+                        manifestações:
+
+                    </p>
+
+                    <div style="word-break: break-word;">
+
+                        ouvidoria@mdh.gov.br
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 IMAGEM DO DISQUE 100
+            ====================================== -->
+
+            <div class="imagem-container">
+
+                <img src="Trabalho Cyberbullying/disque.jpg" alt="">
+
+                
+
+            </div>
+
+
+            <div class="destaque">
+
+                <strong>
+
+                    O que informar ao denunciar?
+
+                </strong>
+
+                <br>
+                <br>
+
+                Sempre que possível, informe quem é a vítima,
+                o que aconteceu, quem praticou a violência,
+                onde ocorreu, quando aconteceu e qual é
+                a situação atual.
+
+                <br>
+                <br>
+
+                <strong>
+
+                    A denúncia pode ser anônima.
+
+                </strong>
+
+            </div>
+
+
+            <br>
+            <br>
+
+
+            <a
+                class="botao"
+                href="https://www.gov.br/mdh/pt-br/ondh"
+                target="_blank">
+
+                Acessar canais oficiais →
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         RODAPÉ
+    ========================================= -->
+
+    <footer>
+
+        <p>
+
+            <strong>
+                CYBER•
+            </strong>
+
+        </p>
+
+        <p>
+
+            Informação é uma ferramenta
+            de prevenção.
+
+        </p>
+
+        <br>
+
+        <p>
+
+            Projeto educativo sobre cyberbullying.
+
+        </p>
+
+        <p>
+
+            Fontes principais:
+            Governo Federal,
+            Planalto e
+            Cyberbullying Research Center.
+
+        </p>
+
+    </footer>
+
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================= -->
+
+    <script>
+
+        window.addEventListener("scroll", function () {
+
+            const header = document.querySelector("header");
+
+            if (window.scrollY > 50) {
+
+                header.style.boxShadow =
+                    "0 5px 25px rgba(0,0,0,0.35)";
+
+            } else {
+
+                header.style.boxShadow = "none";
+
+            }
+
+        });
+
+    </script>
+
+
+</body>
+
+</html>
